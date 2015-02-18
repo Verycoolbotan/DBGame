@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteDatabase;
 public class DBManager {
 	/*
 	 * TABLES: ------- RESULTS SCORE INTEGER USER VARCHAR
+	 * Cheer the most popular game!
+	 *
 	 */
 	private Context context;
 	private String DB_NAME = "game.db";
@@ -39,7 +41,7 @@ public class DBManager {
 	ArrayList<Result> getAllResults() {
 
 		ArrayList<Result> data = new ArrayList<Result>();
-		Cursor cursor = db.rawQuery("SELECT * FROM RESULTS;", null);
+		Cursor cursor = db.rawQuery("SELECT * FROM RESULTS ;", null);
 		boolean hasMoreData = cursor.moveToFirst();
 
 		while (hasMoreData) {
