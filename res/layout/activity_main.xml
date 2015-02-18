@@ -46,10 +46,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
         android:onClick="showHoF"
         android:textSize="30dp" 
-        android:text="Hall of Fame" />
+        android:text="@string/hof" />
+    
+    <Button
+        android:id="@+id/Stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="showStats"
+        android:textSize="30dp" 
+        android:text="@string/stats" />
 
     <ImageButton
         android:id="@+id/playButton"
