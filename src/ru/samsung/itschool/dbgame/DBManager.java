@@ -52,6 +52,14 @@ public class DBManager {
 
 		return data;
 	}
+	
+	public int sumScores(){
+		String query = "SELECT SUM (SCORE) FROM RESULTS;";
+		Cursor cursor = db.rawQuery(query, null);
+		cursor.moveToFirst();
+		String score = cursor.getString(cursor.getColumnIndex("SCORE"));
+		return Integer.parseInt(score);
+	}
 
 	private void createTablesIfNeedBe() {
 		db.execSQL("CREATE TABLE IF NOT EXISTS RESULTS (USERNAME TEXT, SCORE INTEGER);");

@@ -26,6 +26,7 @@ public final class R {
         public static final int playButton=0x7f070006;
         public static final int playerName=0x7f070002;
         public static final int results=0x7f070000;
+        public static final int stats=0x7f070007;
         public static final int textView1=0x7f070001;
     }
     public static final class layout {
