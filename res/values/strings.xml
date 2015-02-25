@@ -6,6 +6,7 @@
     <string name="hof">Hall Of Fame</string>
     <string name="stats">Game statistics</string>
     <string name="title_activity_stats">Show stats</string>
+    <string name="drop_me">Clear all results</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>

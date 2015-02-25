@@ -66,4 +66,8 @@ public class MainActivity extends Activity {
 	public void showStats(View v) {
 		startActivity(new Intent(this, Stats.class));
 	}
+	
+	public void clear(View v) {
+		dbManager.clearResults();
+	}
 }

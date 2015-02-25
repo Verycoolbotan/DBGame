@@ -54,11 +54,32 @@ public class DBManager {
 	}
 	
 	public int sumScores(){
-		String query = "SELECT SUM (SCORE) FROM RESULTS;";
+		String query = "SELECT SUM (SCORE) AS SCORE FROM RESULTS;";
 		Cursor cursor = db.rawQuery(query, null);
 		cursor.moveToFirst();
 		String score = cursor.getString(cursor.getColumnIndex("SCORE"));
 		return Integer.parseInt(score);
+	}
+	
+	public int maxScore(){
+		String query = "SELECT MAX (SCORE) AS SCORE FROM RESULTS;";
+		Cursor cursor = db.rawQuery(query, null);
+		cursor.moveToFirst();
+		String score = cursor.getString(cursor.getColumnIndex("SCORE"));
+		return Integer.parseInt(score);
+	}
+	
+	public int numOfPlayers(){
+		String query = "SELECT DISTINCT COUNT (USERNAME) FROM RESULTS;";
+		Cursor cursor = db.rawQuery(query, null);
+		cursor.moveToFirst();
+		String count = cursor.getString(cursor.getColumnIndex("USERNAME"));
+		return Integer.parseInt(count);
+	}
+	
+	public void clearResults(){
+		db.execSQL("DROP TABLE RESULTS");
+		createTablesIfNeedBe();
 	}
 
 	private void createTablesIfNeedBe() {

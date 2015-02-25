@@ -36,7 +36,8 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050005;
+        public static final int drop_me=0x7f050005;
+        public static final int hello_world=0x7f050006;
         public static final int hof=0x7f050002;
         public static final int stats=0x7f050003;
         public static final int title_activity_ho_f=0x7f050001;
