@@ -70,10 +70,10 @@ public class DBManager {
 	}
 	
 	public int numOfPlayers(){
-		String query = "SELECT DISTINCT COUNT (USERNAME) FROM RESULTS;";
+		String query = "SELECT COUNT (DISTINCT USERNAME)  AS P FROM RESULTS;";
 		Cursor cursor = db.rawQuery(query, null);
 		cursor.moveToFirst();
-		String count = cursor.getString(cursor.getColumnIndex("USERNAME"));
+		String count = cursor.getString(cursor.getColumnIndex("P"));
 		return Integer.parseInt(count);
 	}
 	
