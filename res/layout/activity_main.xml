@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:background="#ecc87f"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:text="Your name"
+        android:textColor="#bb7a20"
         android:textSize="30dp" />
 
     <EditText
@@ -47,9 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:background="@drawable/button"
         android:onClick="showHoF"
-        android:textSize="30dp" 
-        android:text="@string/hof" />
+        android:text="@string/hof"
+        android:textColor="#bb7a20"
+        android:textSize="30dp" />
     
     <Button
         android:id="@+id/Stats"
@@ -57,9 +61,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:background="@drawable/button"
         android:onClick="showStats"
-        android:textSize="30dp" 
-        android:text="@string/stats" />
+        android:text="@string/stats"
+        android:textColor="#bb7a20"
+        android:textSize="30dp" />
     
     <ImageButton
         android:id="@+id/playButton"
@@ -71,6 +77,6 @@
         android:background="@null"
         android:onClick="play"
         android:scaleType="fitCenter"
-        android:src="@drawable/green" />
+        android:src="@drawable/doge" />
 
 </RelativeLayout>

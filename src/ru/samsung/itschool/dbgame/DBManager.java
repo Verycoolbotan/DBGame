@@ -77,6 +77,22 @@ public class DBManager {
 		return Integer.parseInt(count);
 	}
 	
+	public int numOfGames(){
+		String query = "SELECT COUNT (SCORE) AS Q FROM RESULTS;";
+		Cursor cursor = db.rawQuery(query, null);
+		cursor.moveToFirst();
+		String count = cursor.getString(cursor.getColumnIndex("Q"));
+		return Integer.parseInt(count);
+	}
+	
+	public int percentOfEven(){
+		String query = "SELECT COUNT (SCORE) AS E FROM RESULTS WHERE (SCORE%2)=0;";
+		Cursor cursor = db.rawQuery(query, null);
+		cursor.moveToFirst();
+		String count = cursor.getString(cursor.getColumnIndex("E"));
+		return Integer.parseInt(count);
+	}
+	
 	public void clearResults(){
 		db.execSQL("DROP TABLE RESULTS");
 		createTablesIfNeedBe();

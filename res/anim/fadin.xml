@@ -3,16 +3,16 @@
     android:shareInterpolator="false" >
 
     <alpha
-        android:duration="3000"
+        android:duration="250"
         android:fromAlpha="0.0"
         android:toAlpha="1.0" >
     </alpha>
      <rotate
-        android:duration="3000"
+        android:duration="250"
         android:fromDegrees="0"
         android:pivotX="50%"
         android:pivotY="50%"
         android:startOffset="0"
-        android:toDegrees="3600" />
+        android:toDegrees="360" />
 
 </set>

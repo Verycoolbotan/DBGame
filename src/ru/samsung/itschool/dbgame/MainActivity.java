@@ -38,7 +38,6 @@ public class MainActivity extends Activity {
 			@Override
 			public void onAnimationStart(Animation animation) {
 				playButton.setClickable(false);
-				playButton.setImageResource(R.drawable.gray);
 			}
 
 			@Override
@@ -48,7 +47,6 @@ public class MainActivity extends Activity {
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				playButton.setClickable(true);
-				playButton.setImageResource(R.drawable.green);
 				dbManager.addResult(MainActivity.this.playerName.getText().toString(),
 						            Integer.parseInt(MainActivity.this.gameResult.getText().toString()));
 			}
