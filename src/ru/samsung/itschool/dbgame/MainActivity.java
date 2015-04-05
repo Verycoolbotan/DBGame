@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.graphics.Color;
 
 public class MainActivity extends Activity {
 
@@ -53,6 +54,13 @@ public class MainActivity extends Activity {
 		});
 
 		gameResult.setText(((int) (Math.random() * 1001))+"");
+		int r = Integer.parseInt(gameResult.getText().toString());
+		if(r%2==0){
+			gameResult.setTextColor(Color.GREEN);
+		}
+		else{
+			gameResult.setTextColor(Color.RED);
+		}
 		gameResult.startAnimation(play);
 
 	}

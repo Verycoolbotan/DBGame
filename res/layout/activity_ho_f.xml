@@ -4,13 +4,27 @@
     android:layout_height="match_parent"
     android:background="#ecc87f"
     tools:context="${relativePackage}.${activityClass}" >
-
-    <TextView 
-        android:id="@+id/results"
-        android:layout_width="wrap_content"
+    
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/dropMe"
+        android:background="#ecc87f"
+        android:textColor="#bb7a20" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/dropMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button"
+        android:onClick="dropDB"
+        android:text="@string/drop_me"
         android:textColor="#bb7a20"
-        android:textSize="36dp"
-        />
+        android:textSize="30dp" />
 
 </RelativeLayout>

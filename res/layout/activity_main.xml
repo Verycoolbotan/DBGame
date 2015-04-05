@@ -15,7 +15,6 @@
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:text="Your name"
-        android:textColor="#bb7a20"
         android:textSize="30dp" />
 
     <EditText

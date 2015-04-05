@@ -16,13 +16,13 @@ public class Stats extends Activity {
 		setContentView(R.layout.activity_stats);
 		TextView stats = (TextView) this.findViewById(R.id.stats);
 		dbManager = DBManager.getInstance(this);
-		float even = (float)(dbManager.percentOfEven()/dbManager.numOfGames()*100);
+		double even = dbManager.numOfEven()/dbManager.numOfGames()*100;
 		stats.setText("Сумма всех очков: " + dbManager.sumScores() + "\n"
 				+ "Лучший счёт: " + dbManager.maxScore() + "\n"
 				+ "Количество игроков: " + dbManager.numOfPlayers() + "\n" +
 				"Количество сыгранных игр: " + dbManager.numOfGames() + "\n" +
 				"Процент чётных чисел: " + even + "\n" +
-				"Процент чётных чисел: " + (100-even) + "\n");
+				"Процент нечётных чисел: " + (100.0-even) + "\n");
 
 	}
 }

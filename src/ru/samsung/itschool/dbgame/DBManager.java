@@ -10,9 +10,11 @@ import android.database.sqlite.SQLiteDatabase;
 public class DBManager {
 	/*
 	 * TABLES: ------- RESULTS SCORE INTEGER USER VARCHAR
+	 * --------------- USERS USERID INTEGER PRIMARY KEY ASC NAME TEXT PIC TEXT
 	 */
 	private Context context;
 	private String DB_NAME = "game.db";
+	String userPics_path="";
 
 	private SQLiteDatabase db;
 
@@ -31,6 +33,8 @@ public class DBManager {
 		createTablesIfNeedBe(); 
 	}
 
+	
+	
 	void addResult(String username, int score) {
 		db.execSQL("INSERT INTO RESULTS VALUES ('" + username + "', " + score
 				+ ");");
@@ -85,8 +89,8 @@ public class DBManager {
 		return Integer.parseInt(count);
 	}
 	
-	public int percentOfEven(){
-		String query = "SELECT COUNT (SCORE) AS E FROM RESULTS WHERE (SCORE%2)=0;";
+	public int numOfEven(){
+		String query = "SELECT COUNT (SCORE) AS E FROM RESULTS WHERE SCORE%2=0;";
 		Cursor cursor = db.rawQuery(query, null);
 		cursor.moveToFirst();
 		String count = cursor.getString(cursor.getColumnIndex("E"));
