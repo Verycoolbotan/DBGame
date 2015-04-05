@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ecc87f">
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/hello_world"
+        android:textColor="#bb7a20"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/userPic"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:onClick="getPicture"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/doge" />
+
+    <TextView
+        android:id="@+id/playerStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/hello_world"
+        android:textColor="#bb7a20"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/delete_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:textColor="#bb7a20"
+        android:textSize="30dp"
+        android:text="@string/delete_me"
+        android:onClick="deleteMe" />
+    
+</LinearLayout>

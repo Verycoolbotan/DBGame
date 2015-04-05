@@ -8,5 +8,7 @@
     <string name="title_activity_stats">Show stats</string>
     <string name="drop_me">Clear all results</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_player">PlayerActivity</string>
+    <string name="delete_me">Delete personal data</string>
 
 </resources>
